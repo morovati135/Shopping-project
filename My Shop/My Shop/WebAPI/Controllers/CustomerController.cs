@@ -27,11 +27,12 @@ public class CustomerController : ControllerBase
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] CustomerDto customerDto)
     {
-        var result = await _customerService.Login(customerDto.Username, customerDto.Password);
-        if (result == null)
+        var token = await _customerService.Login(customerDto.Username, customerDto.Password);
+
+        if (token == null)
             return Unauthorized("Invalid username or password.");
 
-        return Ok(new { Token = _customerService.GenerateJwtToken(result) });
+        return Ok(new { Token = token });
     }
 
     [HttpGet("{id}")]

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using My_Shop.Application.DTOs;
 using My_Shop.Application.Services;
 using My_Shop.Core.Models;
@@ -7,6 +8,7 @@ namespace My_Shop.WebAPI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class ProductController : ControllerBase
 {
     private readonly IProductService _productService;
