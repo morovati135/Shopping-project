@@ -24,7 +24,6 @@
       <Folder Include="Core\Interfaces\" />
       <Folder Include="Application\DTOs\" />
       <Folder Include="Application\Interfaces\" />
-      <Folder Include="Application\Services\" />
       <Folder Include="Infrastructure\Data\" />
       <Folder Include="Infrastructure\Repositories\" />
       <Folder Include="WebAPI\Controllers\" />
