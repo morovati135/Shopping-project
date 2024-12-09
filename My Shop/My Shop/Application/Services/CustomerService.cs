@@ -12,6 +12,10 @@ public class CustomerService : ICustomerService
         {
             _context = context;
         }
+        public async Task<Customer?> GetCustomerById(int id)
+        {
+            return await _context.Customers.FirstOrDefaultAsync(c => c.Id == id);
+        }
 
         public async Task<Customer> Login(string username, string password)
         {
