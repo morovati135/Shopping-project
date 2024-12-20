@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyShop.Application.DTOs;
 using MyShop.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MyShop.WebAPI.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class OrderController : ControllerBase

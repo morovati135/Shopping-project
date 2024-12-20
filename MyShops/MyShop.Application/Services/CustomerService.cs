@@ -8,31 +8,37 @@ namespace MyShop.Application.Services;
 public class CustomerService : ICustomerService
 {
     private readonly ICustomerRepository _repository;
+    private readonly JwtTokenGenerator _jwtTokenGenerator;
 
-    public CustomerService(ICustomerRepository repository)
+    public CustomerService(ICustomerRepository repository, JwtTokenGenerator jwtTokenGenerator)
     {
         _repository = repository;
+        _jwtTokenGenerator = jwtTokenGenerator;
     }
 
-    public async Task<CustomerDto?> LoginAsync(string username, string password)
+    // متد ورود با تولید توکن JWT
+    public async Task<string> LoginAsync(string username, string password)
     {
+        // بررسی کاربر با نام کاربری و رمز عبور
         var customer = await _repository.GetCustomerByUsernameAndPasswordAsync(username, password);
-        if (customer == null) return null;
+        if (customer == null)
+            return null;
 
-        return new CustomerDto
-        {
-            Username = customer.Username,
-            Password = customer.Password
-        };
+        // تولید توکن JWT
+        return _jwtTokenGenerator.GenerateToken(customer);
     }
 
+    // متد ثبت‌نام
     public async Task RegisterAsync(CustomerDto customerDto)
     {
+        // تبدیل DTO به مدل Customer
         var customer = new Customer
         {
             Username = customerDto.Username,
             Password = customerDto.Password
         };
+
+        // افزودن کاربر به پایگاه داده
         await _repository.AddCustomerAsync(customer);
     }
 }

@@ -18,11 +18,13 @@ public class CustomerController : ControllerBase
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] CustomerDto customerDto)
     {
-        var result = await _customerService.LoginAsync(customerDto.Username, customerDto.Password);
-        if (result == null)
+        var token = await _customerService.LoginAsync(customerDto.Username, customerDto.Password);
+        if (token == null)
             return Unauthorized("Invalid username or password.");
-        return Ok(result);
+
+        return Ok(new { Token = token });
     }
+
 
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] CustomerDto customerDto)
@@ -30,4 +32,5 @@ public class CustomerController : ControllerBase
         await _customerService.RegisterAsync(customerDto);
         return Ok(new { Message = "Registration successful." });
     }
+
 }
