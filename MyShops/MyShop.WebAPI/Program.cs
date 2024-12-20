@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using MyShop.Application.Interfaces;
+using MyShop.Application.Services;
 using MyShop.Infrastructure.Data;
 using MyShop.Core.Interfaces;
 using MyShop.Infrastructure.Repositories;
@@ -18,6 +20,12 @@ builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderItemRepository, OrderItemRepository>();
+// سرویس ها
+builder.Services.AddScoped<ICustomerService, CustomerService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IOrderItemService, OrderItemService>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
