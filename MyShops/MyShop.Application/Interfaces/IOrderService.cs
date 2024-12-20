@@ -1,10 +1,11 @@
 ﻿using My_Shop.Core.Models;
+using MyShop.Application.DTOs;
 
 namespace MyShop.Application.Interfaces;
 
 public interface IOrderService
 {
-    Task<Order?> GetOrderByIdAsync(int id);
-    Task AddOrderAsync(Order order);
-    Task<IEnumerable<Order>> GetOrdersByCustomerIdAsync(int customerId);
+    Task<OrderDto?> GetOrderByIdAsync(int id);
+    Task AddOrderAsync(OrderDto orderDto); 
+    Task<IEnumerable<OrderDto>> GetOrdersByCustomerIdAsync(int customerId); 
 }

@@ -1,6 +1,7 @@
 ﻿using MyShop.Application.Interfaces;
 using MyShop.Core.Interfaces;
 using My_Shop.Core.Models;
+using MyShop.Application.DTOs;
 
 namespace MyShop.Application.Services;
 
@@ -13,13 +14,25 @@ public class CustomerService : ICustomerService
         _repository = repository;
     }
 
-    public async Task<Customer?> LoginAsync(string username, string password)
+    public async Task<CustomerDto?> LoginAsync(string username, string password)
     {
-        return await _repository.GetCustomerByUsernameAndPasswordAsync(username, password);
+        var customer = await _repository.GetCustomerByUsernameAndPasswordAsync(username, password);
+        if (customer == null) return null;
+
+        return new CustomerDto
+        {
+            Username = customer.Username,
+            Password = customer.Password
+        };
     }
 
-    public async Task RegisterAsync(Customer customer)
+    public async Task RegisterAsync(CustomerDto customerDto)
     {
+        var customer = new Customer
+        {
+            Username = customerDto.Username,
+            Password = customerDto.Password
+        };
         await _repository.AddCustomerAsync(customer);
     }
 }

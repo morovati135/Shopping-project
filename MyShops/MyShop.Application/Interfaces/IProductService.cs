@@ -1,11 +1,12 @@
 ﻿using My_Shop.Core.Models;
+using MyShop.Application.DTOs;
 
 namespace MyShop.Application.Interfaces;
 
 public interface IProductService
 {
-    Task<IEnumerable<Product>> GetAllProductsAsync();
-    Task<IEnumerable<Product>> GetProductsByCategoryIdAsync(int categoryId);
-    Task<Product?> GetProductByIdAsync(int id);
-    Task AddProductAsync(Product product);
-}
+    Task<IEnumerable<ProductDto>> GetAllProductsAsync();
+    Task<IEnumerable<ProductDto>> GetProductsByCategoryIdAsync(int categoryId); 
+    Task<ProductDto?> GetProductByIdAsync(int id); 
+    Task AddProductAsync(ProductDto productDto);
+    }

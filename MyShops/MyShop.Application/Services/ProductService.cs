@@ -1,6 +1,7 @@
 ﻿using MyShop.Application.Interfaces;
 using MyShop.Core.Interfaces;
 using My_Shop.Core.Models;
+using MyShop.Application.DTOs;
 
 namespace MyShop.Application.Services;
 
@@ -13,23 +14,52 @@ public class ProductService : IProductService
         _repository = repository;
     }
 
-    public async Task<IEnumerable<Product>> GetAllProductsAsync()
+    public async Task<IEnumerable<ProductDto>> GetAllProductsAsync()
     {
-        return await _repository.GetAllProductsAsync();
+        var products = await _repository.GetAllProductsAsync();
+        return products.Select(p => new ProductDto
+        {
+            Id = p.Id,
+            Name = p.Name,
+            Price = p.Price,
+            CategoryId = p.CategoryId
+        });
     }
 
-    public async Task<IEnumerable<Product>> GetProductsByCategoryIdAsync(int categoryId)
+    public async Task<IEnumerable<ProductDto>> GetProductsByCategoryIdAsync(int categoryId)
     {
-        return await _repository.GetProductsByCategoryIdAsync(categoryId);
+        var products = await _repository.GetProductsByCategoryIdAsync(categoryId);
+        return products.Select(p => new ProductDto
+        {
+            Id = p.Id,
+            Name = p.Name,
+            Price = p.Price,
+            CategoryId = p.CategoryId
+        });
     }
 
-    public async Task<Product?> GetProductByIdAsync(int id)
+    public async Task<ProductDto?> GetProductByIdAsync(int id)
     {
-        return await _repository.GetProductByIdAsync(id);
+        var product = await _repository.GetProductByIdAsync(id);
+        if (product == null) return null;
+
+        return new ProductDto
+        {
+            Id = product.Id,
+            Name = product.Name,
+            Price = product.Price,
+            CategoryId = product.CategoryId
+        };
     }
 
-    public async Task AddProductAsync(Product product)
+    public async Task AddProductAsync(ProductDto productDto)
     {
+        var product = new My_Shop.Core.Models.Product
+        {
+            Name = productDto.Name,
+            Price = productDto.Price,
+            CategoryId = productDto.CategoryId
+        };
         await _repository.AddProductAsync(product);
     }
 }
