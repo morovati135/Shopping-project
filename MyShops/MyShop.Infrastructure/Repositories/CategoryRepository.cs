@@ -18,14 +18,14 @@ public class CategoryRepository : ICategoryRepository
     public async Task<IEnumerable<Category>> GetAllCategoriesAsync()
     {
         using var connection = _dbConnection.CreateConnection();
-        const string query = "SELECT * FROM Categories";
+        const string query = "SELECT * FROM Category";
         return await connection.QueryAsync<Category>(query);
     }
 
     public async Task AddCategoryAsync(Category category)
     {
         using var connection = _dbConnection.CreateConnection();
-        const string query = "INSERT INTO Categories (Name) VALUES (@Name)";
+        const string query = "INSERT INTO Category (Name) VALUES (@Name)";
         await connection.ExecuteAsync(query, new { category.Name });
     }
 }
