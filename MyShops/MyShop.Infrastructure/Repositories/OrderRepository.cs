@@ -1,5 +1,5 @@
-﻿using MyShop.Core.Interfaces;
-using My_Shop.Core.Models;
+﻿using MyShop.Domain.Interfaces;
+using MyShop.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using MyShop.Infrastructure.Data;
 

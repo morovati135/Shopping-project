@@ -1,6 +1,6 @@
-﻿using MyShop.Core.Interfaces;
+﻿using MyShop.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using My_Shop.Core.Models;
+using MyShop.Domain.Models;
 using MyShop.Infrastructure.Data;
 
 namespace MyShop.Infrastructure.Repositories;

@@ -1,7 +1,7 @@
 ﻿using MyShop.Application.Interfaces;
-using MyShop.Core.Interfaces;
-using My_Shop.Core.Models;
+using MyShop.Domain.Interfaces;
 using MyShop.Application.DTOs;
+using MyShop.Application.Mappers; 
 
 namespace MyShop.Application.Services;
 
@@ -17,19 +17,17 @@ public class CategoryService : ICategoryService
     public async Task<IEnumerable<CategoryDto>> GetAllCategoriesAsync()
     {
         var categories = await _repository.GetAllCategoriesAsync();
-        return categories.Select(c => new CategoryDto
-        {
-            Id = c.Id,
-            Name = c.Name
-        });
+
+        // استفاده از CategoryMapper برای تبدیل Entity به DTO
+        return categories.Select(CategoryMapper.ToDto);
     }
 
     public async Task AddCategoryAsync(CategoryDto categoryDto)
     {
-        var category = new My_Shop.Core.Models.Category
-        {
-            Name = categoryDto.Name
-        };
+        // تبدیل DTO به Entity با استفاده از CategoryMapper
+        var category = CategoryMapper.ToEntity(categoryDto);
+
+        // افزودن به پایگاه داده
         await _repository.AddCategoryAsync(category);
     }
 }

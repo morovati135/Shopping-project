@@ -8,10 +8,12 @@
 
     <ItemGroup>
       <ProjectReference Include="..\MyShop.Application\MyShop.Application.csproj" />
-      <ProjectReference Include="..\MyShop.Core\MyShop.Core.csproj" />
+      <ProjectReference Include="..\MyShop.Domain\MyShop.Domain.csproj" />
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="12.0.0" />
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
       <PackageReference Include="Dapper" Version="2.1.35" />
       <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.0" />
       <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0" />

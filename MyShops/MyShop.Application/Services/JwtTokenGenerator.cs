@@ -3,8 +3,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using My_Shop.Core.Models;
-using MyShop.Application.DTOs;
+using MyShop.Domain.Models;
 
 namespace MyShop.Application.Services;
 
@@ -21,33 +20,42 @@ public class JwtTokenGenerator
 
     public string GenerateToken(Customer customer)
     {
-        // خواندن تنظیمات JWT
-        var jwtSettings = _configuration.GetSection("JwtSettings");
-        var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
-        var issuer = jwtSettings["Issuer"];
-        var audience = jwtSettings["Audience"];
-        var durationInMinutes = int.Parse(jwtSettings["DurationInMinutes"]);
-
-        // ایجاد Claims
-        var claims = new List<Claim>
+        try
         {
-            new Claim(JwtRegisteredClaimNames.Sub, customer.Id.ToString()),
-            new Claim(JwtRegisteredClaimNames.UniqueName, customer.Username),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-        };
+            // خواندن تنظیمات JWT
+            var jwtSettings = _configuration.GetSection("JwtSettings");
+            var key = Encoding.UTF8.GetBytes(jwtSettings["Key"] ?? throw new InvalidOperationException("JWT Key is not configured"));
+            var issuer = jwtSettings["Issuer"] ?? "DefaultIssuer";
+            var audience = jwtSettings["Audience"] ?? "DefaultAudience";
+            var durationInMinutes = int.TryParse(jwtSettings["DurationInMinutes"], out var duration) ? duration : 60;
 
-        // ایجاد امضای توکن
-        var credentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256);
+            // ایجاد Claims
+            var claims = new List<Claim>
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, customer.Id.ToString()),
+                new Claim(JwtRegisteredClaimNames.UniqueName, customer.Username),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(ClaimTypes.Role, "Customer") // افزودن نقش
+            };
 
-        // ایجاد توکن
-        var token = new JwtSecurityToken(
-            issuer: issuer,
-            audience: audience,
-            claims: claims,
-            expires: DateTime.UtcNow.AddMinutes(durationInMinutes),
-            signingCredentials: credentials
-        );
+            // ایجاد امضای توکن
+            var credentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256);
 
-        return new JwtSecurityTokenHandler().WriteToken(token);
+            // ایجاد توکن
+            var token = new JwtSecurityToken(
+                issuer: issuer,
+                audience: audience,
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(durationInMinutes),
+                signingCredentials: credentials
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+        catch (Exception ex)
+        {
+            // مدیریت خطاها
+            throw new InvalidOperationException("An error occurred while generating the JWT token.", ex);
+        }
     }
 }

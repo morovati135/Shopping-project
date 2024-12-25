@@ -1,0 +1,14 @@
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Core\bin\Debug\net7.0\MyShop.Core.deps.json
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Core\bin\Debug\net7.0\MyShop.Core.runtimeconfig.json
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Core\bin\Debug\net7.0\MyShop.Core.dll
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Core\bin\Debug\net7.0\MyShop.Core.pdb
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Core\obj\Debug\net7.0\MyShop.Core.csproj.AssemblyReference.cache
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Core\obj\Debug\net7.0\MyShop.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Core\obj\Debug\net7.0\MyShop.Core.AssemblyInfoInputs.cache
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Core\obj\Debug\net7.0\MyShop.Core.AssemblyInfo.cs
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Core\obj\Debug\net7.0\MyShop.Core.csproj.CoreCompileInputs.cache
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Core\obj\Debug\net7.0\MyShop.Core.dll
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Core\obj\Debug\net7.0\refint\MyShop.Core.dll
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Core\obj\Debug\net7.0\MyShop.Core.pdb
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Core\obj\Debug\net7.0\MyShop.Core.genruntimeconfig.cache
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Core\obj\Debug\net7.0\ref\MyShop.Core.dll

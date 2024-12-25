@@ -1,4 +1,4 @@
-﻿using My_Shop.Core.Models;
+﻿using MyShop.Domain.Models;
 using MyShop.Application.DTOs;
 
 namespace MyShop.Application.Interfaces;

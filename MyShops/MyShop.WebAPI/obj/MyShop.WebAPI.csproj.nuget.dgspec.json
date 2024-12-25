@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Core\\MyShop.Core.csproj": {
-                "projectPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Core\\MyShop.Core.csproj"
+              "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj": {
+                "projectPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj"
               }
             }
           }
@@ -48,6 +48,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
             "Dapper": {
               "target": "Package",
               "version": "[2.1.35, )"
@@ -95,14 +103,14 @@
         }
       }
     },
-    "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Core\\MyShop.Core.csproj": {
+    "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Core\\MyShop.Core.csproj",
-        "projectName": "MyShop.Core",
-        "projectPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Core\\MyShop.Core.csproj",
+        "projectUniqueName": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj",
+        "projectName": "MyShop.Domain",
+        "projectPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj",
         "packagesPath": "C:\\Users\\EXO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Core\\obj\\",
+        "outputPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\EXO\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -135,6 +143,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
             "Dapper": {
               "target": "Package",
               "version": "[2.1.35, )"
@@ -207,8 +223,8 @@
               "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Application\\MyShop.Application.csproj": {
                 "projectPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Application\\MyShop.Application.csproj"
               },
-              "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Core\\MyShop.Core.csproj": {
-                "projectPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Core\\MyShop.Core.csproj"
+              "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj": {
+                "projectPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj"
               }
             }
           }
@@ -229,6 +245,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
             "Dapper": {
               "target": "Package",
               "version": "[2.1.35, )"
@@ -323,6 +347,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
             "Dapper": {
               "target": "Package",
               "version": "[2.1.35, )"

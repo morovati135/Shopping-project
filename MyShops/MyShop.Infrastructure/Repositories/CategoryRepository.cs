@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using Dapper;
-using My_Shop.Core.Models;
-using MyShop.Core.Interfaces;
+using MyShop.Domain.Models;
+using MyShop.Domain.Interfaces;
 using MyShop.Infrastructure.Data;
 
 namespace MyShop.Infrastructure.Repositories;

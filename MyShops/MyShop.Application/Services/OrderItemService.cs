@@ -1,7 +1,7 @@
 ﻿using MyShop.Application.Interfaces;
-using MyShop.Core.Interfaces;
-using My_Shop.Core.Models;
+using MyShop.Domain.Interfaces;
 using MyShop.Application.DTOs;
+using MyShop.Application.Mappers; 
 
 namespace MyShop.Application.Services;
 
@@ -17,25 +17,16 @@ public class OrderItemService : IOrderItemService
     public async Task<IEnumerable<OrderItemDto>> GetOrderItemsByOrderIdAsync(int orderId)
     {
         var orderItems = await _repository.GetOrderItemsByOrderIdAsync(orderId);
-        return orderItems.Select(oi => new OrderItemDto
-        {
-            Id = oi.Id,
-            OrderId = oi.OrderId,
-            ProductId = oi.ProductId,
-            Quantity = oi.Quantity,
-            Price = oi.Price
-        });
+
+        // استفاده از Mapper برای تبدیل OrderItem به OrderItemDto
+        return orderItems.Select(OrderItemMapper.ToDto);
     }
 
     public async Task AddOrderItemAsync(OrderItemDto orderItemDto)
     {
-        var orderItem = new My_Shop.Core.Models.OrderItem
-        {
-            OrderId = orderItemDto.OrderId,
-            ProductId = orderItemDto.ProductId,
-            Quantity = orderItemDto.Quantity,
-            Price = orderItemDto.Price
-        };
+        // تبدیل OrderItemDto به OrderItem با استفاده از Mapper
+        var orderItem = OrderItemMapper.ToEntity(orderItemDto);
+
         await _repository.AddOrderItemAsync(orderItem);
     }
 

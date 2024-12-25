@@ -3,9 +3,7 @@ C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\bin\Debug\net7.0\MyShop
 C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\bin\Debug\net7.0\MyShop.Infrastructure.dll
 C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\bin\Debug\net7.0\MyShop.Infrastructure.pdb
 C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\bin\Debug\net7.0\MyShop.Application.dll
-C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\bin\Debug\net7.0\MyShop.Core.dll
 C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\bin\Debug\net7.0\MyShop.Application.pdb
-C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\bin\Debug\net7.0\MyShop.Core.pdb
 C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\obj\Debug\net7.0\MyShop.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\obj\Debug\net7.0\MyShop.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\obj\Debug\net7.0\MyShop.Infrastructure.AssemblyInfoInputs.cache
@@ -17,3 +15,5 @@ C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\obj\Debug\net7.0\refint
 C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\obj\Debug\net7.0\MyShop.Infrastructure.pdb
 C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\obj\Debug\net7.0\MyShop.Infrastructure.genruntimeconfig.cache
 C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\obj\Debug\net7.0\ref\MyShop.Infrastructure.dll
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\bin\Debug\net7.0\MyShop.Domain.dll
+C:\Users\EXO\RiderProjects\MyShops\MyShop.Infrastructure\bin\Debug\net7.0\MyShop.Domain.pdb

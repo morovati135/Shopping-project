@@ -1,7 +1,7 @@
 ﻿using MyShop.Application.Interfaces;
-using MyShop.Core.Interfaces;
-using My_Shop.Core.Models;
+using MyShop.Domain.Interfaces;
 using MyShop.Application.DTOs;
+using MyShop.Application.Mappers; 
 
 namespace MyShop.Application.Services;
 
@@ -19,35 +19,23 @@ public class OrderService : IOrderService
         var order = await _repository.GetOrderByIdAsync(id);
         if (order == null) return null;
 
-        return new OrderDto
-        {
-            Id = order.Id,
-            CustomerId = order.CustomerId,
-            OrderDate = order.OrderDate,
-            IsFinalized = order.IsFinalized
-        };
+        // تبدیل Order به OrderDto با استفاده از OrderMapper
+        return OrderMapper.ToDto(order);
     }
 
     public async Task AddOrderAsync(OrderDto orderDto)
     {
-        var order = new My_Shop.Core.Models.Order
-        {
-            CustomerId = orderDto.CustomerId,
-            OrderDate = orderDto.OrderDate,
-            IsFinalized = orderDto.IsFinalized
-        };
+        // تبدیل OrderDto به Order با استفاده از OrderMapper
+        var order = OrderMapper.ToEntity(orderDto);
+
         await _repository.AddOrderAsync(order);
     }
 
     public async Task<IEnumerable<OrderDto>> GetOrdersByCustomerIdAsync(int customerId)
     {
         var orders = await _repository.GetOrdersByCustomerIdAsync(customerId);
-        return orders.Select(o => new OrderDto
-        {
-            Id = o.Id,
-            CustomerId = o.CustomerId,
-            OrderDate = o.OrderDate,
-            IsFinalized = o.IsFinalized
-        });
+
+        // تبدیل لیست Order به OrderDto با استفاده از OrderMapper
+        return orders.Select(OrderMapper.ToDto);
     }
 }

@@ -1,7 +1,7 @@
 ﻿using MyShop.Application.Interfaces;
-using MyShop.Core.Interfaces;
-using My_Shop.Core.Models;
+using MyShop.Domain.Interfaces;
 using MyShop.Application.DTOs;
+using MyShop.Application.Mappers; 
 
 namespace MyShop.Application.Services;
 
@@ -31,12 +31,8 @@ public class CustomerService : ICustomerService
     // متد ثبت‌نام
     public async Task RegisterAsync(CustomerDto customerDto)
     {
-        // تبدیل DTO به مدل Customer
-        var customer = new Customer
-        {
-            Username = customerDto.Username,
-            Password = customerDto.Password
-        };
+        // تبدیل DTO به مدل Customer با استفاده از CustomerMapper
+        var customer = CustomerMapper.ToEntity(customerDto);
 
         // افزودن کاربر به پایگاه داده
         await _repository.AddCustomerAsync(customer);
