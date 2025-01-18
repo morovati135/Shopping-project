@@ -16,10 +16,23 @@ public class CategoryService : ICategoryService
 
     public async Task<IEnumerable<CategoryDto>> GetAllCategoriesAsync()
     {
-        var categories = await _repository.GetAllCategoriesAsync();
-
-        // استفاده از CategoryMapper برای تبدیل Entity به DTO
-        return categories.Select(CategoryMapper.ToDto);
+        // var categories = await _repository.GetAllCategoriesAsync();
+        //
+        // // استفاده از CategoryMapper برای تبدیل Entity به DTO
+        // return categories.Select(CategoryMapper.ToDto);
+        return new List<CategoryDto>()
+        {
+            new CategoryDto()
+            {
+                Name = "wadaw",
+                Id = 1
+            },
+            new CategoryDto()
+            {
+                Name = "dsadsad",
+                Id = 2
+            }
+        };
     }
 
     public async Task AddCategoryAsync(CategoryDto categoryDto)

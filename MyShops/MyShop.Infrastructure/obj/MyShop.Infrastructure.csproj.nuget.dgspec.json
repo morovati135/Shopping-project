@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Infrastructure\\MyShop.Infrastructure.csproj": {}
+    "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Infrastructure\\MyShop.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Application\\MyShop.Application.csproj": {
+    "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Application\\MyShop.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Application\\MyShop.Application.csproj",
+        "projectUniqueName": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Application\\MyShop.Application.csproj",
         "projectName": "MyShop.Application",
-        "projectPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Application\\MyShop.Application.csproj",
-        "packagesPath": "C:\\Users\\EXO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Application\\obj\\",
+        "projectPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Application\\MyShop.Application.csproj",
+        "packagesPath": "C:\\Users\\aasga\\.nuget\\packages\\",
+        "outputPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
-          "C:\\Users\\EXO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\aasga\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/Ali-Asgari-Dev/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj": {
-                "projectPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj"
+              "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj": {
+                "projectPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj"
               }
             }
           }
@@ -40,9 +42,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net7.0": {
@@ -94,32 +95,48 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj": {
+    "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj",
+        "projectUniqueName": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj",
         "projectName": "MyShop.Domain",
-        "projectPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj",
-        "packagesPath": "C:\\Users\\EXO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\obj\\",
+        "projectPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj",
+        "packagesPath": "C:\\Users\\aasga\\.nuget\\packages\\",
+        "outputPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
-          "C:\\Users\\EXO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\aasga\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/Ali-Asgari-Dev/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -135,9 +152,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net7.0": {
@@ -189,42 +205,58 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Infrastructure\\MyShop.Infrastructure.csproj": {
+    "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Infrastructure\\MyShop.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Infrastructure\\MyShop.Infrastructure.csproj",
+        "projectUniqueName": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Infrastructure\\MyShop.Infrastructure.csproj",
         "projectName": "MyShop.Infrastructure",
-        "projectPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Infrastructure\\MyShop.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\EXO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Infrastructure\\obj\\",
+        "projectPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Infrastructure\\MyShop.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\aasga\\.nuget\\packages\\",
+        "outputPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
-          "C:\\Users\\EXO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\aasga\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/Ali-Asgari-Dev/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Application\\MyShop.Application.csproj": {
-                "projectPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Application\\MyShop.Application.csproj"
+              "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Application\\MyShop.Application.csproj": {
+                "projectPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Application\\MyShop.Application.csproj"
               },
-              "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj": {
-                "projectPath": "C:\\Users\\EXO\\RiderProjects\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj"
+              "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj": {
+                "projectPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj"
               }
             }
           }
@@ -237,9 +269,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net7.0": {
@@ -291,12 +322,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

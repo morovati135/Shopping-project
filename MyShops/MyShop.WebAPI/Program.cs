@@ -96,6 +96,7 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+builder.Services.AddResponseCaching();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -109,6 +110,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseResponseCaching();
 
 app.UseHttpsRedirection();
 
