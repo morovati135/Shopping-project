@@ -3648,11 +3648,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Application\\MyShop.Application.csproj",
+      "projectUniqueName": "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.Application\\MyShop.Application.csproj",
       "projectName": "MyShop.Application",
-      "projectPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Application\\MyShop.Application.csproj",
+      "projectPath": "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.Application\\MyShop.Application.csproj",
       "packagesPath": "C:\\Users\\aasga\\.nuget\\packages\\",
-      "outputPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Application\\obj\\",
+      "outputPath": "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.Application\\obj\\",
       "projectStyle": "PackageReference",
       "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
@@ -3669,8 +3669,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj": {
-              "projectPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj"
+            "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj": {
+              "projectPath": "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj"
             }
           }
         }

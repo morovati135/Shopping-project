@@ -4456,11 +4456,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.WebAPI\\MyShop.WebAPI.csproj",
+      "projectUniqueName": "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.WebAPI\\MyShop.WebAPI.csproj",
       "projectName": "MyShop.WebAPI",
-      "projectPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.WebAPI\\MyShop.WebAPI.csproj",
+      "projectPath": "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.WebAPI\\MyShop.WebAPI.csproj",
       "packagesPath": "C:\\Users\\aasga\\.nuget\\packages\\",
-      "outputPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.WebAPI\\obj\\",
+      "outputPath": "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
@@ -4477,11 +4477,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Application\\MyShop.Application.csproj": {
-              "projectPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Application\\MyShop.Application.csproj"
+            "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.Application\\MyShop.Application.csproj": {
+              "projectPath": "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.Application\\MyShop.Application.csproj"
             },
-            "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Infrastructure\\MyShop.Infrastructure.csproj": {
-              "projectPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Infrastructure\\MyShop.Infrastructure.csproj"
+            "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.Infrastructure\\MyShop.Infrastructure.csproj": {
+              "projectPath": "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.Infrastructure\\MyShop.Infrastructure.csproj"
             }
           }
         }
