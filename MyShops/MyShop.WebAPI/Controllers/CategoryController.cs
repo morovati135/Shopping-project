@@ -15,7 +15,14 @@ public class CategoryController : ControllerBase
     }
 
     [HttpGet]
+    [ResponseCache(Duration = 60, Location = ResponseCacheLocation.Any)]
     public async Task<IActionResult> GetAllCategories()
+    {
+        var categories = await _categoryService.GetAllCategoriesAsync();
+        return Ok(categories);
+    }
+    [HttpGet("test")]
+    public async Task<IActionResult> GetAllCategories2()
     {
         var categories = await _categoryService.GetAllCategoriesAsync();
         return Ok(categories);
