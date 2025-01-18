@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u2wLOmiLrUc=",
+  "dgSpecHash": "vx4rSNOxN7g=",
   "success": true,
-  "projectFilePath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.WebAPI\\MyShop.WebAPI.csproj",
+  "projectFilePath": "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.WebAPI\\MyShop.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aasga\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\aasga\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

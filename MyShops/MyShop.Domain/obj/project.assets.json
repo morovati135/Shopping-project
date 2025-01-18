@@ -3623,11 +3623,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj",
+      "projectUniqueName": "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj",
       "projectName": "MyShop.Domain",
-      "projectPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj",
+      "projectPath": "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.Domain\\MyShop.Domain.csproj",
       "packagesPath": "C:\\Users\\aasga\\.nuget\\packages\\",
-      "outputPath": "D:\\aydin\\caching\\Shopping-project\\MyShops\\MyShop.Domain\\obj\\",
+      "outputPath": "D:\\aydin\\caching\\test\\Shopping-project\\MyShops\\MyShop.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
