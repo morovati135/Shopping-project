@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "acda2hheVFt6JmJUbg8b0BeRKn6g4Xh35qIZXEdOC5Q=",
+  "Source": "MyShop.WebAPI",
+  "BasePath": "_content/MyShop.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

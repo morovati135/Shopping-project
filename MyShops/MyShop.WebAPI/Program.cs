@@ -7,6 +7,7 @@ using MyShop.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using MyShop.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,7 +41,12 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IOrderItemService, OrderItemService>();
-
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = "localhost:6379";
+    options.InstanceName = "test";
+});
+builder.Services.AddSingleton<ICacheManager, CacheManager>();
 // خواندن کلید JWT از تنظیمات
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
@@ -105,11 +111,11 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // pipeline.
-if (app.Environment.IsDevelopment())
-{
+// if (app.Environment.IsDevelopment())
+// {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+// }
 app.UseResponseCaching();
 
 app.UseHttpsRedirection();

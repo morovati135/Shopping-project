@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_1_18_2025_11_17_PM_[Changes]1" date="1737229671714" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.My Shop/.idea/shelf/Uncommitted_changes_before_Checkout_at_1_18_2025_11_17_PM_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 1/18/2025 11:17 PM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="My Shop/obj/Debug/net7.0/My Shop.assets.cache" />
+    <option name="AFTER_PATH" value="My Shop/obj/Debug/net7.0/My Shop.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.My Shop/.idea/shelf/Uncommitted_changes_before_Checkout_at_1_18_2025_11_17_PM_[Changes]1/My Shop.assets.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="My Shop/obj/Debug/net7.0/My Shop.csproj.AssemblyReference.cache" />
+    <option name="AFTER_PATH" value="My Shop/obj/Debug/net7.0/My Shop.csproj.AssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.My Shop/.idea/shelf/Uncommitted_changes_before_Checkout_at_1_18_2025_11_17_PM_[Changes]1/My Shop.csproj.AssemblyReference.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="My Shop/obj/project.nuget.cache" />
+    <option name="AFTER_PATH" value="My Shop/obj/project.nuget.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.My Shop/.idea/shelf/Uncommitted_changes_before_Checkout_at_1_18_2025_11_17_PM_[Changes]1/project.nuget.cache" />
+  </binary>
+</changelist>

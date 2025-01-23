@@ -283,3 +283,6 @@ D:\aydin\caching\test\Shopping-project\MyShops\MyShop.WebAPI\obj\Debug\net7.0\re
 D:\aydin\caching\test\Shopping-project\MyShops\MyShop.WebAPI\obj\Debug\net7.0\MyShop.WebAPI.pdb
 D:\aydin\caching\test\Shopping-project\MyShops\MyShop.WebAPI\obj\Debug\net7.0\MyShop.WebAPI.genruntimeconfig.cache
 D:\aydin\caching\test\Shopping-project\MyShops\MyShop.WebAPI\obj\Debug\net7.0\ref\MyShop.WebAPI.dll
+D:\aydin\caching\test\Shopping-project\MyShops\MyShop.WebAPI\bin\Debug\net7.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+D:\aydin\caching\test\Shopping-project\MyShops\MyShop.WebAPI\bin\Debug\net7.0\Pipelines.Sockets.Unofficial.dll
+D:\aydin\caching\test\Shopping-project\MyShops\MyShop.WebAPI\bin\Debug\net7.0\StackExchange.Redis.dll

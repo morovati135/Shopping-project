@@ -8,18 +8,25 @@ namespace MyShop.Application.Services;
 public class ProductService : IProductService
 {
     private readonly IProductRepository _repository;
+    private readonly ICacheManager _cacheManager;
 
-    public ProductService(IProductRepository repository)
+    public ProductService(IProductRepository repository, ICacheManager cacheManager)
     {
         _repository = repository;
+        _cacheManager = cacheManager;
     }
 
     public async Task<IEnumerable<ProductDto>> GetAllProductsAsync()
     {
-        var products = await _repository.GetAllProductsAsync();
-
-        
-        return products.Select(ProductMapper.ToDto);
+        var key="products";
+        var result = await _cacheManager.GetAsync<System.Collections.Generic.List<ProductDto>>(key);
+        if (result == null) 
+        {
+            var products = await _repository.GetAllProductsAsync();
+            result=products.Select(ProductMapper.ToDto).ToList();
+           await _cacheManager.SetAsync(key,result,TimeSpan.FromHours(1));
+        }
+        return result;
     }
 
     public async Task<IEnumerable<ProductDto>> GetProductsByCategoryIdAsync(int categoryId)
